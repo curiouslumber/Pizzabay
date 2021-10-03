@@ -2,36 +2,36 @@
 <html lang="en">
 
 <head>
+    <!-- Meta -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PizzaBay - Home</title>
+    <title>PizzaBay - Recipies</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon/favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="shortcut icon" type="image/jpg" href="../../favicon.png" />
 
     <!-- JS Files -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-
-    <style>
-
-    </style>
 </head>
 
 <body style="background-color: #422520; " id="top">
 
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 93%; background-color: brown; margin-left: 2%;">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand" href="#">PizzaBay</a>
-
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../home/index.html">Home</a>
+                        <a class="nav-link" href="../../index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Recipies</a>
@@ -49,7 +49,9 @@
             </div>
         </div>
     </nav>
+    <!-- End of Navbar -->
 
+    <!-- Cards -->
     <div class="cards">
         <div class="container">
             <div class="row" id="cards">
@@ -98,7 +100,9 @@
         </div>
     </div>
     </div>
+    <!-- End of cards -->
 
+    <!-- Card on click carousel -->
     <div id="carouselExampleControls" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -145,7 +149,6 @@
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                     </button>
-
                     <table width="60%">
                         <tr class="ingredients" style="color: white;">
                             <td>
@@ -172,11 +175,9 @@
                             </td>
                         </tr>
                     </table>
-
                 </section>
             </div>
             <div class="carousel-item">
-
                 <section class="recipies">
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="display:none">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -191,6 +192,8 @@
         </div>
 
     </div>
+    <!-- End of card on click carousel -->
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -239,7 +242,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- End of modal -->
 
 
 

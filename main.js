@@ -1,21 +1,13 @@
-var animateButton = function (e) {
+var clients = document.getElementById('clients');
+var services = document.getElementById('services');
 
-  e.preventDefault;
-  //reset animation
-  e.target.classList.remove('animate');
+clients.addEventListener('click', function() {
+  $(clients).toggleClass("active");
+  $(".parent:not(#clients)").toggleClass("invisible");
+}, false);
 
-  e.target.classList.add('animate');
-  setTimeout(function () {
-    e.target.classList.remove('animate');
-  }, 700);
+services.addEventListener('click', function() {
+  $(services).toggleClass("active");
+  $(".parent:not(#services)").toggleClass("invisible");
+}, false);
 
-  setTimeout(function () {
-    window.location.href = './pages/home/index.html';
-  }, 500);
-};
-
-var bubblyButtons = document.getElementsByClassName("bubbly-button");
-
-for (var i = 0; i < bubblyButtons.length; i++) {
-  bubblyButtons[i].addEventListener('click', animateButton, false);
-}
