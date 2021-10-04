@@ -144,7 +144,7 @@ body {
 
 /* FORM CSS */
 
-.contactus {
+.login {
     border-radius: 18px;
     height: 60vh;
     width: 25vw;
@@ -152,7 +152,7 @@ body {
     margin-top: 4%;
 }
 
-.contactus-header {
+.login-header {
     font-size: 2em;
     font-family: 'Pacifico', cursive;
     color: rgb(53, 53, 53);
@@ -164,7 +164,7 @@ body {
 /* MEDIA FOR MOBILE */
 
 @media screen and (max-width: 990px) {
-    .contactus {
+    .login {
         margin-top: 8%;
         width: 80vw;
         height: 80vh;

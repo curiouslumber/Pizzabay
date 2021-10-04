@@ -144,20 +144,29 @@ body {
 
 /* FORM CSS */
 
-.contactus {
+.privacy {
     border-radius: 18px;
-    height: 60vh;
-    width: 25vw;
+    height: 66vh;
+    width: 45vw;
     background-color: white;
     margin-top: 4%;
+    padding-inline: 10%;
 }
 
-.contactus-header {
+.privacy-header {
     font-size: 2em;
     font-family: 'Pacifico', cursive;
     color: rgb(53, 53, 53);
     /* background: blue; */
     text-align: center;
+}
+
+.privacy-body {
+    width: 100%;
+    padding-inline: 2%;
+    /* background-color: green; */
+    height: 40vh;
+    text-align: left;
 }
 
 
