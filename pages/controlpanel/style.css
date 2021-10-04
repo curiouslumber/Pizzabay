@@ -144,27 +144,28 @@ body {
 
 /* FORM CSS */
 
-.contactus {
+.controlpanel {
     border-radius: 18px;
-    height: 60vh;
-    width: 25vw;
-    background-color: white;
-    margin-top: 4%;
+    height: 78vh;
+    width: 75vw;
+    background-color: rgb(196, 196, 196);
+    margin-top: 3%;
 }
 
-.contactus-header {
+.controlpanelheader {
     font-size: 2em;
     font-family: 'Pacifico', cursive;
     color: rgb(53, 53, 53);
     /* background: blue; */
-    text-align: center;
+    margin-top: 1%;
+    padding-left: 2%;
 }
 
 
 /* MEDIA FOR MOBILE */
 
 @media screen and (max-width: 990px) {
-    .contactus {
+    .controlpanel {
         margin-top: 8%;
         width: 80vw;
         height: 80vh;
