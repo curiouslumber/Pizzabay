@@ -40,31 +40,31 @@
                         <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../recipies/index.html">Recipies</a>
+                        <a class="nav-link" href="../../pages/recipies/index.html">Recipies</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="../contactus/index.html">Contact Us</a>
+                        <a class="nav-link" href="../../pages/contactus/index.html">Contact Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         More
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" style="color: grey;" href="../termsac/index.html">Terms and Conditions</a></li>
-                            <li><a class="dropdown-item" style="color: grey;" href="../pripolicy/index.html">Privacy Policy</a></li>
-                            <li><a class="dropdown-item" style="color: grey;" href="../about/index.html">About Us</a></li>
+                            <li><a class="dropdown-item" style="color: grey;" href="../../pages/termsac/index.html">Terms and Conditions</a></li>
+                            <li><a class="dropdown-item" style="color: grey;" href="../../pages/pripolicy/index.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" style="color: grey;" href="../../pages/about/index.html">About Us</a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../login/index.html">Login</a>
+                        <a class="nav-link active" href="../../pages/login/index.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../register/index.html">Register/Sign Up</a>
+                        <a class="nav-link" href="../../pages/register/index.html">Register/Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Control Panel</a>
+                        <a class="nav-link" href="../../pages/controlpanel/index.php">Control Panel</a>
                     </li>
                 </ul>
             </div>
@@ -73,12 +73,11 @@
     <!-- End of Navbar -->
 
 
-    <div class="controlpanel">
-        <div class="controlpanelheader">
-            Control Panel
-        </div>
+    <div class="contactus">
+                <div class="contactus-header"  style="width: 100%; height:100%">
+                    User successfully logged in
+                </div>
     </div>
-
 
 
 
@@ -86,5 +85,24 @@
     <script src="main.js">
     </script>
 </body>
-
 </html>
+<?php
+
+$servername = "localhost";
+$username ="root";
+$password = "";
+$database_name="Pizzabay";
+
+$conn = mysqli_connect($servername, $username, $password, $database_name);
+
+$email = $_POST['email'];
+$passcode = $_POST['password'];
+
+$sql = "INSERT INTO LOGIN_tbl (email, passcode) VALUES ( '$email', '$passcode')";
+
+mysqli_query($conn,$sql);
+// if(mysqli_query($conn,$sql)){
+//     echo "inserted value successfully<br>";
+// }else {
+//     echo "Error creating table ". mysqli_error($conn);
+// }

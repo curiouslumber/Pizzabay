@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PizzaBay - About</title>
+    <title>PizzaBay - Control</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -46,8 +46,8 @@
                         <a class="nav-link" href="../contactus/index.html">Contact Us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        More
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            More
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" style="color: grey;" href="../termsac/index.html">Terms and Conditions</a></li>
@@ -61,10 +61,10 @@
                         <a class="nav-link" href="../login/index.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Register/Sign Up</a>
+                        <a class="nav-link" href="../register/index.html">Register/Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../controlpanel/index.php">Control Panel</a>
+                        <a class="nav-link active" href="#">Control Panel</a>
                     </li>
                 </ul>
             </div>
@@ -73,32 +73,62 @@
     <!-- End of Navbar -->
 
 
-    <div class="aboutus">
-        <table>
-            <tr>
-                <div class="aboutus-header" style="margin-top: 5%;">
-                    About Us
-                </div>
-            </tr>
-            <br><br>
-            <tr>
-                <div class="image-row" style="width: 100%;">
-                    <img src="pic3.png" alt="profile pic" class="image">
-                </div>
-            </tr>
-            <tr>
-                <div class="description" style="width: 100%;">
-                    <div class="name">
-                        Noel Pinto
-                    </div>
-                    <div class="des">
-                        Hi, I'm the web developer for this site. I enjoy coding and music. Also I love to play the keyboard in my spare time and improve my memory skills with a round of chess.
-                    </div>
-                </div>
-            </tr>
-        </table>
+    <div class="controlpanel">
+        <div class="controlpanelheader">
+            Control Panel
+        </div>
+        <div class="controlpanelbody" style="background-color: white; padding-left: 5%; padding-top: 5%; font-size: 1.4em; height: 90%">
+            Users logged in: <br>
+            <?php
 
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $database_name = "Pizzabay";
+
+            $conn = mysqli_connect($servername, $username, $password, $database_name);
+
+            $sql =  "SELECT * FROM LOGIN_tbl";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+
+                //echo "success2";
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                    echo "Email: " . $row["email"] . "<br>";
+                }
+            } else {
+                echo "0 results";
+            }
+
+            ?>
+            <br><br> Users registered : <br>
+            <?php
+
+            $sql =  "SELECT * FROM REGISTER_tbl";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+
+                //echo "success2";
+
+                while ($row = mysqli_fetch_assoc($result)) {
+
+                    echo "Name: " . $row["full_name"] . " - Username: " . $row["username"] . " - Email: " . $row["email"] . "<br>";
+                }
+            } else {
+                echo "0 results";
+            }
+
+            mysqli_close($conn);
+            ?>
+        </div>
     </div>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="main.js">

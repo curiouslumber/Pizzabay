@@ -144,33 +144,30 @@ body {
 
 /* FORM CSS */
 
-.controlpanel {
+.contactus {
     border-radius: 18px;
-    height: 78vh;
-    width: 75vw;
+    height: 15vh;
+    width: 25vw;
     background-color: white;
-    margin-top: 3%;
+    margin-top: 4%;
 }
 
-.controlpanelheader {
+.contactus-header {
     font-size: 2em;
     font-family: 'Pacifico', cursive;
     color: rgb(53, 53, 53);
     /* background: blue; */
-    margin-top: 1%;
-    padding-left: 2%;
-}
-
-.controlpanelbody {
-    background-color: white;
-    padding-left: 5%
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
 /* MEDIA FOR MOBILE */
 
 @media screen and (max-width: 990px) {
-    .controlpanel {
+    .contactus {
         margin-top: 8%;
         width: 80vw;
         height: 80vh;
