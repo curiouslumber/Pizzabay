@@ -122,6 +122,23 @@
                 echo "0 results";
             }
 
+            ?>
+            <br><br> Contact us messages : <br>
+            <?php
+
+            $sql =  "SELECT * FROM CONTACT_tbl";
+            $result = mysqli_query($conn, $sql);
+
+            if (mysqli_num_rows($result) > 0) {
+
+                //echo "success2";
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "Name: " . $row["name"] . " - Username: " . $row["email"] . " - Message: " . $row["message"] . "<br>";
+                }
+            } else {
+                echo "0 results";
+            }
+
             mysqli_close($conn);
             ?>
         </div>

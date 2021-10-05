@@ -84,24 +84,24 @@
             <tr>
                 <form method="post" action="../../backend/register/register.php" onsubmit="">
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="fname" class="form-label">Your name:-</label>
-                        <input type="text" class="form-control" id="fname" placeholder="Alex Johns" name="fname">
+                        <label for="fname" class="form-label">Your name <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="fname" placeholder="Alex Johns" name="fname" required>
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="uname" class="form-label">Preferred Username</label>
-                        <input type="text" class="form-control" id="uname" placeholder="alexjohns123" name="username">
+                        <label for="uname" class="form-label">Preferred Username <span style="color: red;">*</span></label>
+                        <input type="text" class="form-control" id="uname" placeholder="alexjohns123" name="username" required>
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+                        <label for="email" class="form-label">Email address <span style="color: red;">*</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" required>
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="password">
+                        <label for="password" class="form-label">Password <span style="color: red;">*</span></label>
+                        <input type="password" class="form-control" id="password" placeholder="password" required>
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="cpassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="cpassword" placeholder="password" name="password">
+                        <label for="cpassword" class="form-label">Confirm Password <span style="color: red;">*</span></label>
+                        <input type="password" class="form-control" id="cpassword" placeholder="password" name="password" required>
                     </div>
                     <br>
                     <div class="mb-3" style="font-weight: bold; display: flex;  justify-content: center;">

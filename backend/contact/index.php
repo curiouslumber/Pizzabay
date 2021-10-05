@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PizzaBay - Contact us</title>
+    <title>PizzaBay - Contact</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" type="text/css" />
@@ -40,31 +40,31 @@
                         <a class="nav-link" aria-current="page" href="../../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../recipies/index.html">Recipies</a>
+                        <a class="nav-link" href="../../pages/recipies/index.html">Recipies</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link active" href="#">Contact Us</a>
+                        <a class="nav-link" href="../../pages/contactus/index.html">Contact Us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         More
                         </a>
                         <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" style="color: grey;" href="../termsac/index.html">Terms and Conditions</a></li>
-                            <li><a class="dropdown-item" style="color: grey;" href="../pripolicy/index.html">Privacy Policy</a></li>
-                            <li><a class="dropdown-item" style="color: grey;" href="../about/index.html">About Us</a></li>
+                            <li><a class="dropdown-item" style="color: grey;" href="../../pages/termsac/index.html">Terms and Conditions</a></li>
+                            <li><a class="dropdown-item" style="color: grey;" href="../../pages/pripolicy/index.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" style="color: grey;" href="../../pages/about/index.html">About Us</a></li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../login/index.html">Login</a>
+                        <a class="nav-link" href="../../pages/login/index.html">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../register/index.html">Register/Sign Up</a>
+                        <a class="nav-link" href="../../pages/register/index.html">Register/Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../controlpanel/index.php">Control Panel</a>
+                        <a class="nav-link" href="../../pages/controlpanel/index.php">Control Panel</a>
                     </li>
                 </ul>
             </div>
@@ -72,36 +72,11 @@
     </nav>
     <!-- End of Navbar -->
 
-    <div class="contactus">
-        <table>
-            <tr>
-                <div class="contactus-header" style="margin-top: 5%;">
-                    Contact Us
-                </div>
-            </tr>
-            <br><br>
-            <tr>
-                <form method="post" action="../../backend/contact/index.php">
-                    <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="name" class="form-label">Your name <span style="color: red;">*</span></label>
-                        <input type="text" class="form-control" id="name" placeholder="Alex Johns" name="name" required>
-                    </div>
-                    <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="email" class="form-label">Email address <span style="color: red;">*</span></label>
-                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" required>
-                    </div>
-                    <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold; ">
-                        <label for="comment" class="form-label">Why do you want to reach out to us? <span style="color: red;">*</span></label>
-                        <textarea class="form-control" id="comment" rows="5" required name="comment"></textarea>
-                    </div>
-                    <br>
-                    <div class="mb-3" style="font-weight: bold; display: flex;  justify-content: center;">
-                        <input type="submit" value="Submit" name="submit" class="btn btn-dark">
-                    </div>
-                </form>
-            </tr>
-        </table>
 
+    <div class="contactus">
+                <div class="contactus-header"  style="width: 100%; height:100%">
+                    Feedback successfully submitted
+                </div>
     </div>
 
 
@@ -110,5 +85,26 @@
     <script src="main.js">
     </script>
 </body>
-
 </html>
+
+<?php
+
+$servername = "localhost";
+$username ="root";
+$password = "";
+$database_name="Pizzabay";
+
+$conn = mysqli_connect($servername, $username, $password, $database_name);
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$comment= $_POST['comment'];
+
+$sql = "INSERT INTO CONTACT_tbl (name, email, message) VALUES ('$name', '$email', '$comment')";
+
+mysqli_query($conn,$sql);
+// if(mysqli_query($conn,$sql)){
+//     echo "inserted value successfully<br>";
+// }else {
+//     echo "Error creating table ". mysqli_error($conn);
+// }

@@ -83,12 +83,12 @@
             <tr>
                 <form method="post" action="../../backend/login/login.php">
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="email" class="form-label">Email address:</label>
-                        <input type="email" class="form-control" id="email" placeholder="kevinjames@gmail.com" name="email">
+                        <label for="email" class="form-label">Email address <span style="color: red;">*</span></label>
+                        <input type="email" class="form-control" id="email" placeholder="kevinjames@gmail.com" name="email" required>
                     </div>
                     <div class=" mb-3 " style="padding-inline: 5%; width: 100%; font-weight: bold; ">
-                        <label for="password " class="form-label ">Password</label>
-                        <input type="password " class="form-control " id="password " placeholder="your password " name="password">
+                        <label for="password " class="form-label ">Password <span style="color: red;">*</span></label>
+                        <input type="password " class="form-control " id="password " placeholder="your password " name="password" required>
                     </div>
                     <br>
                     <div class="mb-3 " style="font-weight: bold; display: flex; justify-content: center; ">
