@@ -64,7 +64,7 @@
                         <a class="nav-link active" href="#">Register/Sign Up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../controlpanel/index.html">Control Panel</a>
+                        <a class="nav-link" href="../controlpanel/index.php">Control Panel</a>
                     </li>
                 </ul>
             </div>
@@ -82,30 +82,30 @@
             </tr>
             <br>
             <tr>
-                <form>
+                <form method="post" action="../../backend/register/register.php" onsubmit="">
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="exampleFormControlInput1" class="form-label">Your name:-</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alex Johns">
+                        <label for="fname" class="form-label">Your name:-</label>
+                        <input type="text" class="form-control" id="fname" placeholder="Alex Johns" name="fname">
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="exampleFormControlInput1" class="form-label">Preferred Username</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Alex Johns">
+                        <label for="uname" class="form-label">Preferred Username</label>
+                        <input type="text" class="form-control" id="uname" placeholder="alexjohns123" name="username">
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="exampleFormControlInput1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="password">
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="exampleFormControlInput1" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpassword" placeholder="password" name="password">
                     </div>
                     <br>
                     <div class="mb-3" style="font-weight: bold; display: flex;  justify-content: center;">
-                        <input type="button" value="Submit" name="submit" class="btn btn-dark">
+                        <input type="submit" value="Submit" class="btn btn-dark">
                     </div>
                 </form>
             </tr>
@@ -115,9 +115,7 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="main.js">
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+    <script src="main.js ">
     </script>
 </body>
-
-</html>
