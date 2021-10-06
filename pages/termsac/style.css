@@ -173,9 +173,9 @@ body {
 /* MEDIA FOR MOBILE */
 
 @media screen and (max-width: 990px) {
-    .contactus {
+    .tos {
         margin-top: 8%;
-        width: 80vw;
+        width: 90vw;
         height: 80vh;
     }
 }

@@ -82,7 +82,7 @@
             </tr>
             <br>
             <tr>
-                <form method="post" action="../../backend/register/register.php" onsubmit="">
+                <form method="post" action="../../backend/register/register.php" onsubmit="return checkPassword(this)">
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
                         <label for="fname" class="form-label">Your name <span style="color: red;">*</span></label>
                         <input type="text" class="form-control" id="fname" placeholder="Alex Johns" name="fname" required>
@@ -96,12 +96,12 @@
                         <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email" required>
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="password" class="form-label">Password <span style="color: red;">*</span></label>
-                        <input type="password" class="form-control" id="password" placeholder="password" required>
+                        <label for="password" class="form-label">Password (Length: 8-14) <span style="color: red;">*</span></label>
+                        <input type="password" class="form-control" id="password" placeholder="password" name="password" required>
                     </div>
                     <div class="mb-3" style="padding-inline: 5%; width: 100%; font-weight: bold;">
-                        <label for="cpassword" class="form-label">Confirm Password <span style="color: red;">*</span></label>
-                        <input type="password" class="form-control" id="cpassword" placeholder="password" name="password" required>
+                        <label for="password1" class="form-label">Confirm Password <span style="color: red;">*</span></label>
+                        <input type="password" class="form-control" id="password1" placeholder="confirm password" required>
                     </div>
                     <br>
                     <div class="mb-3" style="font-weight: bold; display: flex;  justify-content: center;">
